@@ -7,8 +7,8 @@ wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
 
-wget -O config.json https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/config.json
-wget -O v2ray.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/v2rayScript/v2ray.service
+wget -O servser.json https://raw.githubusercontent.com/GuNanHai/trojan-go/main/server.json
+wget -O trojan.zip https://github.com/GuNanHai/trojan-go/blob/main/trojan-go-linux-amd64.zip
 wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
 
 sudo apt-get update
