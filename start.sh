@@ -44,7 +44,7 @@ chmod +x  trojan-go
 mv trojan-go /usr/bin/trojango/trojan-go
 
 
-mkdir /var/log/v2ray
+mkdir /var/log/trojan
 mv server.json /usr/bin/trojango/server.json
 mv geoip.dat /usr/bin/trojango/geoip.dat
 mv geosite.dat  /usr/bin/trojango/geosite.dat
