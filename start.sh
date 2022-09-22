@@ -11,6 +11,7 @@ wget -O server.json https://raw.githubusercontent.com/GuNanHai/trojan-go/main/se
 wget -O trojan.zip https://github.com/GuNanHai/trojan-go/blob/main/trojan-go-linux-amd64.zip
 wget -O bysideen.crt   https://github.com/GuNanHai/trojan-go/blob/main/bysideen.crt   
 wget -O bysideen.key   https://github.com/GuNanHai/trojan-go/blob/main/bysideen.key
+wget -O trojan.service  https://github.com/GuNanHai/trojan-go/blob/main/trojan.service
 
 sudo apt-get update
 sudo apt-get -y install zip
