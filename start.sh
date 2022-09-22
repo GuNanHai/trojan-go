@@ -7,9 +7,10 @@ wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
 
-wget -O servser.json https://raw.githubusercontent.com/GuNanHai/trojan-go/main/server.json
+wget -O server.json https://raw.githubusercontent.com/GuNanHai/trojan-go/main/server.json
 wget -O trojan.zip https://github.com/GuNanHai/trojan-go/blob/main/trojan-go-linux-amd64.zip
-wget -O v2ray-linux-64.zip https://github.com/GuNanHai/offlineDown/raw/master/v2rayScript/v2ray-linux-64.zip
+wget -O bysideen.crt   https://github.com/GuNanHai/trojan-go/blob/main/bysideen.crt   
+wget -O bysideen.key   https://github.com/GuNanHai/trojan-go/blob/main/bysideen.key
 
 sudo apt-get update
 sudo apt-get -y install zip
@@ -35,17 +36,17 @@ systemctl enable aria2.service && systemctl start aria2.service
 ulimit -n 8192
 caddy -conf /usr/local/bin/Caddyfile  & disown
 
-unzip v2ray-linux-64.zip
-rm v2ray-linux-64.zip
-mkdir /usr/bin/v2ray
-chmod +x v2ray v2ctl
-mv v2ray /usr/bin/v2ray/v2ray
-mv v2ctl /usr/bin/v2ray/v2ctl
-mkdir /etc/v2ray
+unzip trojan.zip 
+rm trojan.zip 
+mkdir /usr/bin/trojango
+chmod +x  trojan-go
+mv trojan-go /usr/bin/trojango/trojan-go
+
+
 mkdir /var/log/v2ray
-mv config.json /etc/v2ray/
-mv geoip.dat /usr/bin/v2ray/geoip.dat
-mv geosite.dat  /usr/bin/v2ray/geosite.dat
-mv v2ray.service /etc/systemd/system/v2ray.service
+mv server.json /usr/bin/trojango/server.json
+mv geoip.dat /usr/bin/trojango/geoip.dat
+mv geosite.dat  /usr/bin/trojango/geosite.dat
+mv trojan.service /etc/systemd/system/v2ray.service
 systemctl enable v2ray.service
 systemctl start v2ray.service
