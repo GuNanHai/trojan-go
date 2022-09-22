@@ -47,6 +47,6 @@ mkdir /var/log/v2ray
 mv server.json /usr/bin/trojango/server.json
 mv geoip.dat /usr/bin/trojango/geoip.dat
 mv geosite.dat  /usr/bin/trojango/geosite.dat
-mv trojan.service /etc/systemd/system/v2ray.service
-systemctl enable v2ray.service
-systemctl start v2ray.service
+mv trojan.service /etc/systemd/system/trojan.service
+systemctl enable trojan.service
+systemctl start trojan.service
