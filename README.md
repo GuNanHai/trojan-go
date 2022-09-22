@@ -1,4 +1,5 @@
 # trojan-go
 
 
-bash <(curl -Ls https://github.com/GuNanHai/trojan-go/blob/main/start.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/GuNanHai/trojan-go/main/start.sh)
+
