@@ -6,7 +6,6 @@ wget -O web.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/we
 wget -O aria2c.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2c.zip
 wget -O caddy.zip https://raw.githubusercontent.com/GuNanHai/offlineDown/master/caddy.zip
 wget -O aria2.service https://raw.githubusercontent.com/GuNanHai/offlineDown/master/aria2.service
-
 wget -O server.json https://raw.githubusercontent.com/GuNanHai/trojan-go/main/server.json
 wget -O trojan.zip https://github.com/GuNanHai/trojan-go/blob/main/trojan-go-linux-amd64.zip
 wget -O bysideen.crt   https://github.com/GuNanHai/trojan-go/blob/main/bysideen.crt   
