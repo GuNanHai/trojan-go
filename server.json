@@ -1,15 +1,46 @@
 {
-    "run_type": "server",
-    "local_addr": "0.0.0.0",
-    "local_port": 443,
-    "remote_addr": "127.0.0.1",
-    "remote_port": 80,
-    "password": [
-        "bysideen"
+    "log": {
+        "loglevel": "info"
+    },
+    "inbounds": [
+        {
+            "port": 443, # 可以换成其他端口
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "875e77f9-d17c-4355-9ae0-e62303e07206", // 填写UUID，可以使用xray uuid生成
+                        "flow": "xtls-rprx-direct",
+                        "level": 0
+                    }
+                ],
+                "decryption": "none",
+                "fallbacks": [
+                    {
+                        "dest": 80 // 回落配置，可以直接转到其他网站，例如"www.baidu.com:80"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "xtls",
+                "xtlsSettings": {
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/usr/bin/v2ray/bysideen.crt", // 换成你的证书，绝对路径
+                            "keyFile": "/usr/bin/v2ray/bysideen.key" // 换成你的私钥，绝对路径
+                        }
+                    ]
+                }
+            }
+        }
     ],
-    "ssl": {
-        "cert": "bysideen.crt",
-        "key": "bysideen.key",
-        "fallback_port": 1234
-    }
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
 }
